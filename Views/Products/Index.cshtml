@@ -1,0 +1,44 @@
+﻿@model List<OnlineBookStore.Models.Product>
+
+@{
+    ViewBag.Title = "Allbooks";
+}
+
+<h2>Index</h2>
+<div>
+   
+        @Html.ActionLink("Create", "create","Products")
+    
+</div>
+<br />
+<div>
+    <table class="table table-bordered ">
+        <tr>
+            <th>Id</th>
+            <th>BookName</th>
+            <th>ISBN</th>
+            <th>AuthorName</th>
+            <th>Publisher</th>
+            <th>BookType</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>PublishedDate</th>
+        </tr>
+       
+        @foreach(var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.BookName</td>
+                    <td>@p.ISBN</td>
+                    <td>@p.AuthorName</td>
+                    <td>@p.Publisher</td>
+                    <td>@p.BookType</td>
+                    <td>@p.Description</td>
+                    <td>@p.Price</td>
+                    <td>@p.PublishedDate</td>
+                </tr>
+            }
+    </table>
+</div>
+
